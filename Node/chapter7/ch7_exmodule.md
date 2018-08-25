@@ -35,6 +35,13 @@ $ npm init
 
 #### 2.ejs기본 형식
 
+* 메서드
+| 메서드 | 설명 | 
+| :-------- | :--------: | 
+| render(srt, data, option) | ejs 문자열을 HTML 문자열로 변경합니다. | 
+** '문자열을 리턴하는 메서드'
+
+* 태그 
 | 태그 | 설명 | 
 | :-------- | :--------: | 
 | <% Code %> | 자바스크립트 코드 입력 | 
@@ -63,6 +70,7 @@ $ npm install jade (2016년도 상반기에 jade모듈명이 pug로 변경)
 | 메서드 | 설명 | 
 | :-------- | :--------: | 
 | compile(string, option) | jade 문자열을 HTML 문자열로 바꿀 수 있는 함수를 생성 | 
+** '함수를 리턴하는 메서드'
 
 * 태그 
 | 태그 | 설명 | 
@@ -77,3 +85,38 @@ $ npm install jade (2016년도 상반기에 jade모듈명이 pug로 변경)
 | - Code | 자바스크립트 코드를 입력합니다. | 
 | #{Value} | 데이터를 출력합니다. | 
 | = Value | 데이터를 출력합니다. | 
+
+
+
+### [3] 서버 실행 모듈
+ejs/jade 모듈처럼 require() 함수로 추출하지않고, 
+터미널에서 곧바로 사용할 수 있는 모듈
+* css/scss - koala 프로그램과 비슷한 역할
+
+#### [3-1] supervisor 모듈
+파일의 변경 사항을 자동으로 인식하고 실행을 종료시킨 후 다시 실행
+(터미널에 $ node test.js / Ctrl + C 를 반복입력하지 않게 해줌)
+** 매우 편함
+##### 1. supervisor모듈 설치
+$ npm install -g supervisor
+
+##### 2. supervisor모듈 명령어 확인
+* $ supervisor supervisor.test.js (서버실행)
+
+##### 3. supervisor모듈 주의사항
+$ 서버 프로그램을 실행할 때만 사용 
+
+#### [3-2] forever 모듈
+웹서비스의 예외 상황을 대비하고자 만들어진 모듈이 forever 모듈
+-> forever 모듈을 사용하면 웹 서버를 안정적으로 유지
+
+##### 1. forever모듈 설치
+$ npm install -g forever
+
+##### 2. forever모듈 명령어 확인
+* $ forever start forever.test.js (서버실행)
+    ** http://127.0.0.1:52273/error --> 서버 죽음
+    ** http://127.0.0.1:52273       --> 서버 실행
+* $ forever list (현재 실행되고 있는 웹 서버 확인)
+* $ forever stop 0 (프로세스 종료)
+
