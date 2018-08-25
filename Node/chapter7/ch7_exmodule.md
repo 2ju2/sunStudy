@@ -116,10 +116,10 @@ $ npm install -g forever
 ##### 2. forever모듈 명령어 확인
 | 명령어 | 설명 | 
 | :-------- | :--------: | 
-| * $ forever start forever.test.js
-    ** http://127.0.0.1:52273/error --> 서버 죽음
-    ** http://127.0.0.1:52273       --> 서버 실행 | 서버실행 | 
+| $ forever start forever.test.js | 서버실행 | 
 | $ forever list | 현재 실행되고 있는 웹 서버 확인 | 
 | $ forever stop 0 | 프로세스 종료 | 
 
+    ** http://127.0.0.1:52273/error --> 서버 죽음
+    ** http://127.0.0.1:52273       --> 서버 실행
 
