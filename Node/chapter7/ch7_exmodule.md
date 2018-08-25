@@ -49,7 +49,7 @@ $ npm init
 | <%=Value %> | 데이터를 출력 | 
 
 * 만약 ejs / js 파일의 변수명이 동일한 경우 ejs의 데이터로 사용됨.
-** 따라서, js 파일에 test 값을 넣어놓고, ejs파일에 실제 데이터 입력으로 활용
+* 따라서, js 파일에 test 값을 넣어놓고, ejs파일에 실제 데이터 입력으로 활용
 
 
 ### [2] jade 모듈
@@ -103,7 +103,9 @@ ejs/jade 모듈처럼 require() 함수로 추출하지않고,
 $ npm install -g supervisor
 
 ##### 2. supervisor모듈 명령어 확인
-* $ supervisor supervisor.test.js (서버실행)
+| 명령어 | 설명 | 
+| :-------- | :--------: | 
+| $ supervisor supervisor.test.js | 서버실행 | 
 
 ##### 3. supervisor모듈 주의사항
 $ 서버 프로그램을 실행할 때만 사용 
