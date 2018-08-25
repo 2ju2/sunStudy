@@ -25,3 +25,16 @@ $ npm init
 --> https://youtu.be/MRd0pb2X8FE
 
 * 설치하면 package.json의 dependencies 에 추가됨
+
+
+#### 1. ejs모듈 사용
+1. 작업폴더에 ejs.basic.js 와 ejsPage.ejs 생성
+2. 터미널에 node ejs.basic.js 작성하여 서버실행
+3. 소스 업데이트시 터미널에 Ctrl + C 하여 서버종료 후 다시 2번 입력
+
+#### 2.ejs기본 형식
+
+| 태그 | 설명 | 
+| :-------- | :--------: | 
+| <% Code %> | 자바스크립트 코드 입력 | 
+| <%=Value %> | 데이터를 출력 | 
